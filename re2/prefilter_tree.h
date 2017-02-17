@@ -20,8 +20,21 @@
 #include <string>
 #include <vector>
 
+//by liwei 17/2/17
+#include <sstream>
+
 #include "util/util.h"
 #include "util/sparse_array.h"
+
+namespace std {
+    template <typename T>
+    string to_string(T x) {
+        ostringstream os;
+        os << x;
+        return os.str();
+    }
+}
+
 
 namespace re2 {
 
